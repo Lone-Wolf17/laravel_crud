@@ -41,7 +41,7 @@ class ArticleController extends Controller
         $request->validate([
             'topic' => 'required',
             'description' => 'required',
-            'categorie' => 'required',
+            'category' => 'required',
         ]);
 
         Article::create($request->all());
@@ -84,7 +84,7 @@ class ArticleController extends Controller
         $request->validate([
             'topic' => 'required',
             'description' => 'required',
-            'categorie' => 'required',
+            'category' => 'required',
         ]);
 
         $article->update($request->all());
@@ -96,8 +96,9 @@ class ArticleController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Article  $article
+     * @param \App\Models\Article $article
      * @return \Illuminate\Http\RedirectResponse
+     * @throws \Exception
      */
     public function destroy(Article $article)
     {

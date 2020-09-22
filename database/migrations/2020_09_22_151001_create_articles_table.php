@@ -16,7 +16,7 @@ class CreateArticlesTable extends Migration
             $table->increments('id');
             $table->string('topic');
             $table->text('description');
-            $table->string('categorie');
+            $table->string('category');
             $table->timestamps();
         });
     }
